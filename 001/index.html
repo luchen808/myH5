@@ -11,31 +11,34 @@
         }
         html{height: 100%;}
         @keyframes myfirst {
-            from {
-                opacity: 0
-            }
-            to {
-                opacity: 100
-            }
+            0% {opacity: 0}
+            50% {opacity: 100}
+            75%{opacity: 0}
+            100%{opacity: 0}
         }
-            h1,p{
-                animation: myfirst 1s infinite;
-            }
-        @keyframes my {
-            from {background: red;}
-            to {background: green;}
+        @keyframes mysecond {
+            0%{opacity: 0}
+            15%{opacity: 0}
+            55% {opacity: 0}
+            100% {opacity: 100}
         }
-        h1,p{
-            animation: my 1s infinite;}
+        h1{ font-size: 100px;
+            position: absolute;
+            width: 100%;
+            text-align:center;
+            animation: my 0.5s;}
+        p {font-size: 50px;
+            position: absolute;
+            width: 100%;}
+        #yao {animation: myfirst 5s infinite}
+        #jiu {animation: mysecond 5s infinite}
         </style>
 </head>
 <body>
-<audio src="bgm.mp3" controls="controls" autoplay="autoplay">
+<audio src="bgm.mp3" controls="controls" autoplay="autoplay" loop="loop">
 </audio>
-<h1>静夜思</h1>
-<p>床前明月光，</p>
-<p>疑是地上霜。</p>
-<p>举头望明月，</p>
-<p>低头思故乡。</p>
+<h1>武功</h1>
+<p id="yao">要想练就绝世武功</p>
+<p id="jiu">就必须忍受常人难忍的痛</p>
 </body>
 </html>
